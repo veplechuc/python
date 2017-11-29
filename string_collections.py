@@ -41,4 +41,10 @@ d[2] ='momo'
 for dat in d:
     print("key value =", dat, " value =", d[dat])
 
+a = 0.7
+if (a < 0.7):
+    print('si')
+else:
+    print('no')
+
 
