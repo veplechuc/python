@@ -2,13 +2,7 @@
      examples for object
 """
 import time
-
-
-def banner(message, border='-'):
-    line = border * len(message)
-    print(message)
-    print(line)
-
+import commons
 
 
 # id object
@@ -38,7 +32,7 @@ print(id(p), id(q))
 # que el operador is define si son el mismo objeto
 
 # pasaje de valor a una func es por valor.. si modifico el valor en la func se modifica el original
-banner('paso de parametros sin modificar el valor')
+commons.banner('paso de parametros sin modificar el valor')
 m = [1,2]
 print('valor del array original', m)
 
@@ -52,7 +46,7 @@ add_number(m)
 print('valor del array original', m)
 
 #ahora ojo con
-banner('paso de parametros cambiando el valor pero no el original')
+commons.banner('paso de parametros cambiando el valor pero no el original')
 
 m = [1,2]
 print('valor del array original', m)
@@ -66,7 +60,7 @@ add_number2(m)
 
 print('valor del array original', m)
 
-banner('paso de parametros cambiando el valor original')
+commons.banner('paso de parametros cambiando el valor original')
 # se pueden cambiar los valores con
 m = [1,2]
 print('valor del array original', m)
@@ -82,15 +76,14 @@ add_number3(m)
 print('valor del array original', m)
 
 
-banner('ojo con esto', '*')
+commons.banner('ojo con esto', '*')
 
 def show_default_time(arg=time.ctime()):
     print(arg)
 show_default_time()
 print()
 show_default_time()
-
-banner('solucion al problema anterior', '*')
+commons.banner('solucion al problema anterior', '*')
 
 def show_default_time1(arg=None):
     if arg is None:
